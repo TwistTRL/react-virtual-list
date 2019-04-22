@@ -1,69 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 # react-virtual-list
+
+## Demo:
+https://twisttrl.github.io/react-virtual-list/
+
+## Usage:
+Simple supply a list of nodes, which must be key-ed! VirtualList wraps them around with a div to provide fixed height and to determine when to mount.
+
+Once mounted, the items will not be unmounted, to prevent repeated mounting and unmounting. This will hurt performance in some circumstances. 
+
+## Example:
+```
+  <VirtualList width={200} height={200} rowHeight={40} scrollbarColor="green">
+    <p key='p1'>a p</p>
+    <p key='p2'>a p</p>
+    <div key='div1'>a div</div>
+    <span key='span1'>a span</span>
+    <p key='p3'>a p</p>
+    <span key='span2'>a span</span>
+    <div key='div2'>a div</div>
+    <div key='div3'>a div</div>
+    <p key='p4'>a p</p>
+    <div key='div4'>a div</div>
+    <span key='span3'>a span</span>
+    <span key='span4'>a span</span>
+  </VirtualList>
+```
+
+## Features:
+* Simple
+* Fast (on list that grows)
+
+## Pitfalls:
+* Do not use on list that is going to rearrange very often (this includes sorting).
