@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rreact-virtual-list/precache-manifest.9571afa27b954faa91a8f3f8905aeac1.js"
+  "/react-virtual-list/precache-manifest.1e8ac6fe8b54b8560bdfdcb1c2121572.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/rreact-virtual-list/index.html", {
+workbox.routing.registerNavigationRoute("/react-virtual-list/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
