@@ -1,9 +1,9 @@
 {
   "name": "react-virtual-list",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "react-vertical-scrollbar": "github:twisttrl/react-vertical-scrollbar"
+    "plot-utils": "github:zhoulytwinyu/plot-utils",
+    "react-vertical-scrollbar": "github:TwistTRL/react-vertical-scrollbar"
   },
   "peerDependencies": {
     "proptypes": "^1.1.0",
@@ -36,7 +36,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "gh-pages": "^2.0.1",
     "react-dom": "^16.8.6",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^3.0.0"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -47,5 +47,20 @@
       "stage-0"
     ]
   },
-  "homepage": "https://twisttrl.github.io/react-virtual-list"
+  "homepage": "https://twisttrl.github.io/react-virtual-list",
+  "description": "## Demo: https://twisttrl.github.io/react-virtual-list/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TwistTRL/react-virtual-list.git"
+  },
+  "keywords": [
+    "list",
+    "virtual",
+    "react"
+  ],
+  "author": "Lingyu Zhou (zhoulytwin@gmail.com)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/TwistTRL/react-virtual-list/issues"
+  }
 }
